@@ -3,8 +3,8 @@ import './App.css';
 import { Typography } from '@mui/material';
 function App() {
   return (
-    <div >
-     <Typography>Project Initial setup</Typography>
+    <div>
+      <Typography>Project Initial setup</Typography>
     </div>
   );
 }
