@@ -1,11 +1,23 @@
 import React from 'react';
 import './App.css';
-import { Typography } from '@mui/material';
+import { Typography, Container, Toolbar, AppBar, Box } from '@mui/material';
+
+import { Dashboard } from './page/dashboard';
+
 function App() {
   return (
-    <div className='test'>
-      <Typography>Project Initial setup</Typography>
-    </div>
+    <Box sx={{ flexGrow: 1 }}>
+      <AppBar position='sticky'>
+        <Toolbar variant='dense'>
+          <Typography variant='h6' color='inherit' component='div'>
+            Pokemon Web Application
+          </Typography>
+        </Toolbar>
+      </AppBar>
+      <Container fixed sx={{ my: 1 }}>
+        <Dashboard />
+      </Container>
+    </Box>
   );
 }
 
