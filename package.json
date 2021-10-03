@@ -2,6 +2,11 @@
   "name": "pokemon-app",
   "version": "0.1.0",
   "private": true,
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
+  },
   "dependencies": {
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
@@ -15,6 +20,7 @@
     "@types/node": "^12.20.27",
     "@types/react": "^17.0.26",
     "@types/react-dom": "^17.0.9",
+    "enzyme-to-json": "^3.6.2",
     "prettier": "^2.4.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -51,6 +57,9 @@
     ]
   },
   "devDependencies": {
+    "@types/enzyme-adapter-react-16": "^1.0.6",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
     "husky": "^7.0.0",
     "lint-staged": "^11.1.2"
   }
