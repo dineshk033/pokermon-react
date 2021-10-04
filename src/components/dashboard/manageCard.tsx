@@ -1,4 +1,4 @@
-import { Stack, TextField, IconButton, Typography, InputAdornment } from '@mui/material';
+import { Stack, TextField, IconButton, InputAdornment } from '@mui/material';
 import React from 'react';
 import { CardSortByButton } from './cardSort';
 import Icon from '@mui/material/Icon';
