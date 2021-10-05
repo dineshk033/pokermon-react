@@ -5,7 +5,7 @@
 
 export interface ActionModel {
   type: string;
-  payload?: PokemonModel[];
+  payload?: PokemonModel[] | string | any;
 }
 export interface PokemonModel {
   name: string;
