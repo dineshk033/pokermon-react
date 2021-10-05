@@ -1,14 +1,17 @@
-import { useState } from 'react';
+import { Dispatch, useState } from 'react';
 import { Menu, Button, MenuItem, Typography } from '@mui/material';
 import Icon from '@mui/material/Icon';
+import { useDispatch } from 'react-redux';
+import { sortByValue } from '../../redux/actions';
 
 // ----------------------------------------------------------------------
 
-const SORT_BY_OPTIONS = ['Name', 'Height', 'Weight'];
+const SORT_BY_OPTIONS = ['ID', 'Name', 'Height', 'Weight'];
 
 export function CardSortByButton() {
   const [open, setOpen] = useState<HTMLElement | null>(null);
-  const [selected, setSelected] = useState('name');
+  const [selected, setSelected] = useState('ID');
+  const dispatch: Dispatch<any> = useDispatch();
   const handleOpen = (event: React.MouseEvent<HTMLButtonElement>) => {
     setOpen(event.currentTarget);
   };
@@ -18,6 +21,7 @@ export function CardSortByButton() {
   };
   const handleSort = (value: string) => {
     setSelected(value);
+    dispatch(sortByValue(value));
     setOpen(null);
   };
 
